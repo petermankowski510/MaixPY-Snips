@@ -25,7 +25,7 @@ while(True):
     img.find_edges(image.EDGE_SIMPLE, threshold=(20, 255))
     #img.cartoon(size=255, seed_threshold=0.05, floating_threshold=0.05, mask=None)
 
-    for c in img.find_lines(threshold = 10000, theta_margin = 15, rho_margin = 15):
+    for c in img.find_lines(threshold = 9000, theta_margin = 15, rho_margin = 15):
            if (min_degree <= c.theta()) and (c.theta() <= max_degree):
                img.draw_line(c.line(), color = white, thickness=10)
                print(c)
